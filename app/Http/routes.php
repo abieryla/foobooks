@@ -23,6 +23,8 @@
 |
 */
 
+
+
 Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/', function () {
@@ -39,9 +41,19 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/book/{id}', 'BookController@getShow'); 
 
 	Route::get('/practice', function() {
-		echo 'app.url: '.config('app.url');	
-		echo '<br>app.env: '.config('app.env');	
-		return '';
+		//echo 'app.url: '.config('app.url');	
+		//echo '<br>app.env: '.config('app.env');
+	
+//		 $data = Array('foo' => 'bar');
+//		 Debugbar::info($data);
+//	         Debugbar::error('Error!');
+//	         Debugbar::warning('Watch out…');
+//	         Debugbar::addMessage('Another message', 'mylabel');
+
+		$random = new Random();
+		return $random->getRandomString(8);
+	
+//		return 'practice';
 	}); 
 	
 });
