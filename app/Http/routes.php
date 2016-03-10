@@ -37,4 +37,11 @@ Route::group(['middleware' => ['web']], function () {
 	Route::post('/book/create', 'bookController@postCreate'); 
 
         Route::get('/book/{id}', 'bookController@getShow'); 
+
+	Route::get('/practice', function() {
+		echo 'app.url: '.config('app.url');	
+		echo '<br>app.env: '.config('app.env');	
+		return '';
+	}); 
+	
 });
