@@ -24,7 +24,7 @@ class BookController extends Controller {
      * Responds to requests to GET /books/create
      */
     public function getCreate() {
-	    $view = '<form method="POST" action="/public/book/create">';
+	    $view = '<form method="POST" action="/book/create">';
             $view .= csrf_field();
             $view .= 'Book title: <input type="text" name="title">';
             $view .= '<input type="submit">';
