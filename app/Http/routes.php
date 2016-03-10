@@ -30,11 +30,11 @@ Route::group(['middleware' => ['web']], function () {
             return 'Hello welcome to my Laravel application!';
         });
         
-        Route::get('http://foobooks.abieryla.me/books', 'bookController@getIndex'); 
+        Route::get('http://foobooks.abieryla.me/public/books', 'bookController@getIndex'); 
         
-	Route::get('http://foobooks.abieryla.me/book/create', 'bookController@getCreate'); 
+	Route::get('http://foobooks.abieryla.me/public/book/create', 'bookController@getCreate'); 
 	
-	Route::post('http://foobooks.abieryla.me/book/create', 'bookController@postCreate'); 
+	Route::post('http://foobooks.abieryla.me/public/book/create', 'bookController@postCreate'); 
 
-        Route::get('http://foobooks.abieryla.me/book/{id}', 'bookController@getShow'); 
+        Route::get('http://foobooks.abieryla.me/public/book/{id}', 'bookController@getShow'); 
 });
