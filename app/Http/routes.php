@@ -29,7 +29,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/', function () {
             #return view('welcome');
-            return 'Hello welcome to my Laravel application!';
+            return 'Hello welcome to my Foobooks Laravel application!';
         });
         
         Route::get('/books', 'BookController@getIndex'); 
